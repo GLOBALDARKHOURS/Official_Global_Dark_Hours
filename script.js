@@ -119,7 +119,13 @@ function startTask(taskId, url) {
         localStorage.setItem('taskRewards', JSON.stringify(taskRewards));
         updateBalance();
 
-        // Show completed message and remove link
+        // Show completed message and move the task to the bottom
+        const taskList = document.getElementById('taskList');
+        if (taskList) {
+            const taskItem = taskButton.parentNode;
+            taskList.appendChild(taskItem); // Move completed task to bottom
+        }
+
         if (taskLink) {
             taskLink.remove();
             const completionText = document.createElement('span');
@@ -141,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateCountdown, 1000);
 
     // Disable completed tasks and update text
+    const taskList = document.getElementById('taskList');
     for (const taskId in taskRewards) {
         if (taskRewards[taskId]) {
             const button = document.querySelector(`button[onclick*="startTask('${taskId}',"]`);
@@ -148,6 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (button) {
                 button.disabled = true;
                 button.textContent = "Completed";
+                if (taskList) {
+                    const taskItem = button.parentNode;
+                    taskList.appendChild(taskItem); // Ensure completed tasks are at the bottom
+                }
             }
             if (link) {
                 const completionText = document.createElement('span');
