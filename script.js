@@ -73,9 +73,9 @@ function displayMessage(message) {
     const messageElement = document.createElement('div');
     messageElement.textContent = message;
     messageElement.style.position = 'fixed';
-    messageElement.style.bottom = '20px';
+    messageElement.style.top = '50%';
     messageElement.style.left = '50%';
-    messageElement.style.transform = 'translateX(-50%)';
+    messageElement.style.transform = 'translate(-50%, -50%)';
     messageElement.style.backgroundColor = '#333';
     messageElement.style.color = '#fff';
     messageElement.style.padding = '10px 20px';
@@ -86,7 +86,7 @@ function displayMessage(message) {
 
     setTimeout(() => {
         document.body.removeChild(messageElement);
-    }, 6000); // Message will disappear after 6 seconds
+    }, 7000); // Message will disappear after 7 seconds
 }
 
 // Handle task completion
