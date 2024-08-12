@@ -86,7 +86,7 @@ function displayMessage(message) {
 
     setTimeout(() => {
         document.body.removeChild(messageElement);
-    }, 5000); // Message will disappear after 5 seconds
+    }, 6000); // Message will disappear after 6 seconds
 }
 
 // Handle task completion
