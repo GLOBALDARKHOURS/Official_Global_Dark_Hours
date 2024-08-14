@@ -39,7 +39,7 @@ function updateCountdown() {
             const hours = Math.floor(remaining / (1000 * 60 * 60));
             const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
             if (countdownElement) {
-                countdownElement.textContent = `Time remaining: ${hours} hours ${minutes} minutes`;
+                countdownElement.textContent = `Next Claim: ${hours} hours ${minutes} minutes`;
             }
             if (claimButton) {
                 claimButton.disabled = true;
