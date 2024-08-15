@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Existing balance and last claim
 let balance = localStorage.getItem('balance') ? parseInt(localStorage.getItem('balance')) : 0;
 let lastClaim = localStorage.getItem('lastClaim') ? new Date(localStorage.getItem('lastClaim')) : null;
-let claimTime = 4 * 60 * 60 * 1000; // 4 hours in milliseconds
+let claimTime = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
 
 // Task rewards tracking
 let taskRewards = localStorage.getItem('taskRewards') ? JSON.parse(localStorage.getItem('taskRewards')) : {};
@@ -59,7 +59,7 @@ function updateCountdown() {
 function claimHours() {
     const now = new Date();
     if (!lastClaim || now - lastClaim >= claimTime) {
-        balance += 4;
+        balance += 6;
         updateBalance();
         lastClaim = new Date();
         localStorage.setItem('lastClaim', lastClaim);
@@ -137,7 +137,7 @@ function startTask(taskId, url) {
             taskButton.disabled = true;
             taskButton.textContent = "Completed";
         }
-    }, 20000); // 20 seconds delay
+    }, 14000); // 14 seconds delay
 }
 
 // Initial setup on page load
