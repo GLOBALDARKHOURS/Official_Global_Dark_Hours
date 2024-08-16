@@ -51,7 +51,7 @@ section p {
 
 /* Task List Styles */
 .task-list {
-    max-height: 400px; /* Adjust based on your design */
+    max-height: 300px; /* Adjust based on your design */
     overflow-y: auto; /* Enables vertical scrolling */
 }
 
