@@ -78,7 +78,7 @@ function displayMessage(message) {
     messageElement.style.transform = 'translate(-50%, -50%)';
     messageElement.style.backgroundColor = '#333';
     messageElement.style.color = '#fff';
-    messageElement.style.padding = '10px 300px';
+    messageElement.style.padding = '10px 30px';
     messageElement.style.borderRadius = '5px';
     messageElement.style.zIndex = '1000';
     messageElement.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
