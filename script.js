@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Existing balance and last claim
 let balance = localStorage.getItem('balance') ? parseInt(localStorage.getItem('balance')) : 0;
 let lastClaim = localStorage.getItem('lastClaim') ? new Date(localStorage.getItem('lastClaim')) : null;
-let claimTime = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
+let claimTime = 5 * 60 * 60 * 1000; // 5 hours in milliseconds
 
 // Task rewards tracking
 let taskRewards = localStorage.getItem('taskRewards') ? JSON.parse(localStorage.getItem('taskRewards')) : {};
@@ -78,7 +78,7 @@ function displayMessage(message) {
     messageElement.style.transform = 'translate(-50%, -50%)';
     messageElement.style.backgroundColor = '#333';
     messageElement.style.color = '#fff';
-    messageElement.style.padding = '10px 20px';
+    messageElement.style.padding = '10px 300px';
     messageElement.style.borderRadius = '5px';
     messageElement.style.zIndex = '1000';
     messageElement.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
@@ -137,7 +137,7 @@ function startTask(taskId, url) {
             taskButton.disabled = true;
             taskButton.textContent = "Completed";
         }
-    }, 14000); // 14 seconds delay
+    }, 16000); // 16 seconds delay
 }
 
 // Initial setup on page load
