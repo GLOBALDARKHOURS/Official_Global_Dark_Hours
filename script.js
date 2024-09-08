@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (username) {
         const headerElement = document.querySelector('header h3');
         if (headerElement) {
-            headerElement.textContent = `Dark Hours - ${username}`;
+            headerElement.textContent = `Hello👋 - ${username}`;
         }
     }
 });
