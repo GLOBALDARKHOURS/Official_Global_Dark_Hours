@@ -49,6 +49,13 @@ section p {
     margin: 10px 0;
 }
 
+/* Bordered Text for "Your Hours" */
+.bordered-text {
+    border: 2px solid white;
+    padding: 10px;
+    display: inline-block;
+}
+
 /* Task List Styles */
 .task-list {
     max-height: 300px; /* Adjust based on your design */
@@ -135,6 +142,13 @@ button:disabled {
     font-size: 1.2rem;
     color: #ff0000; /* Red for remaining time */
     margin-top: 10px;
+}
+
+/* Styles for Green "Claim" Text */
+#countdown.claim-text {
+    color: #00ff00; /* Green color for claim text */
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 /* Input Styles */
