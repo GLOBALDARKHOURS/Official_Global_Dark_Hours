@@ -31,6 +31,7 @@ function updateBalance() {
 function updateCountdown() {
     const countdownElement = document.getElementById('countdown');
     const claimButton = document.getElementById('claimButton');
+    
     if (lastClaim) {
         const now = new Date();
         const elapsed = now - lastClaim;
@@ -43,6 +44,7 @@ function updateCountdown() {
             }
             if (claimButton) {
                 claimButton.disabled = true;
+                claimButton.src = "hours.png"; // Change image to hours.png when disabled
             }
         } else {
             if (countdownElement) {
@@ -50,6 +52,7 @@ function updateCountdown() {
             }
             if (claimButton) {
                 claimButton.disabled = false;
+                claimButton.src = "hours2.png"; // Change image to hours2.png when enabled
             }
         }
     }
