@@ -101,7 +101,7 @@
     </header>
 
     <div id="walletContainer">
-        <input type="text" id="walletAddress" placeholder="Paste Your USDT BEP20 Address">
+        <input type="text" id="walletAddress" placeholder="Paste Your USDT TON Address">
         <button id="saveButton" onclick="saveWalletAddress()">Save</button>
         <button id="copyButton" style="display: none;" onclick="copyWalletAddress()">Copy</button>
     </div>
@@ -109,7 +109,7 @@
     <!-- New Task Section -->
     <section class="task-container">
         <div class="task-title">
-            <h2>Make my wallet eligible</h2>
+            <h2>Wallet Activity</h2>
         </div>
         <p>Task: News</p>
         <button id="startButton" onclick="startTask()">Start</button>
@@ -202,7 +202,7 @@
         function verifyTask() {
             const code = document.getElementById('verificationCode').value;
             if (code === '1234') {
-                displayMessage("Task completed successfully!");
+                displayMessage("Wallet activity is successfully recorded!");
                 markTaskCompleted();
                 addHoursToBalance(15); // Add 15 hours to balance in index.html
             } else {
@@ -244,6 +244,5 @@
             }, 7000); // Message will disappear after 7 seconds
         }
     </script>
-
 </body>
 </html>
