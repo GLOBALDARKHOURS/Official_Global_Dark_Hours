@@ -14,6 +14,14 @@
             margin: 0;
             padding: 0;
         }
+        .bordered-text {
+            padding: 10px;
+            border: 2px solid white; /* White border */
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+            color: white; /* White text */
+            margin: 20px;
+            border-radius: 5px; /* Slightly rounded corners */
+        }
     </style>
     <script>
         function saveLink() {
@@ -70,11 +78,13 @@
 </head>
 <body>
     <header>
-        <h1>Invite More, Earn More Hours</h1>
+        <h2>Invite more, Earn more hours</h2>
     </header>
     <section>
-        <p>Get your referral link in the Telegram bot.</p>
-        <p>Remember, your referral bonus will not appear here but rather in the bot. It will be calculated and added to your existing balance before the distribution date.</p>
+        <div class="bordered-text">
+            <p>Get your referral link in the Telegram bot.</p>
+            <p>Remember, your referral bonus will not appear here but rather in the bot. It will be calculated and added to your existing balance before the distribution date.</p>
+        </div>
         <p>Go to the bot and copy your invite link:</p>
         <input type="text" id="inviteLink" placeholder="Paste your invite link here" />
         <button id="saveButton" onclick="saveLink()">Save</button>
