@@ -140,7 +140,7 @@ function startTask(taskId, url) {
             taskButton.disabled = true;
             taskButton.textContent = "Completed";
         }
-    }, 16000); // 16 seconds delay
+    }, 20000); // 20 seconds delay
 }
 
 // Initial setup on page load
