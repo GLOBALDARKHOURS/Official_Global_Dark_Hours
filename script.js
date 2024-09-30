@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Existing balance and last claim
 let balance = localStorage.getItem('balance') ? parseInt(localStorage.getItem('balance')) : 0;
 let lastClaim = localStorage.getItem('lastClaim') ? new Date(localStorage.getItem('lastClaim')) : null;
-let claimTime = 5 * 60 * 60 * 1000; // 5 hours in milliseconds
+let claimTime = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
 
 // Task rewards tracking
 let taskRewards = localStorage.getItem('taskRewards') ? JSON.parse(localStorage.getItem('taskRewards')) : {};
@@ -62,7 +62,7 @@ function updateCountdown() {
 function claimHours() {
     const now = new Date();
     if (!lastClaim || now - lastClaim >= claimTime) {
-        balance += 5;
+        balance += 12;
         updateBalance();
         lastClaim = new Date();
         localStorage.setItem('lastClaim', lastClaim);
