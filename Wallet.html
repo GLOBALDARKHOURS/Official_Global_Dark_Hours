@@ -144,13 +144,14 @@
             const savedTaskData = JSON.parse(localStorage.getItem('taskData'));
             const taskStatus = localStorage.getItem('taskCompleted');
 
+            // Check if task data has changed
             if (!savedTaskData || JSON.stringify(savedTaskData) !== JSON.stringify(currentTaskData)) {
-                // If task data is altered, reset task completion status
+                // If task data has changed, reset task completion status
                 localStorage.removeItem('taskCompleted');
                 localStorage.setItem('taskData', JSON.stringify(currentTaskData));
-            }
-
-            if (taskStatus === 'true') {
+                resetTask();  // Reset task to its initial state
+            } else if (taskStatus === 'true') {
+                // If task was already completed, mark it as completed
                 markTaskCompleted();
             }
         });
@@ -221,6 +222,14 @@
             let balance = localStorage.getItem('balance') || 0;
             balance = parseInt(balance) + hours;
             localStorage.setItem('balance', balance);
+        }
+
+        // Reset task when task data changes
+        function resetTask() {
+            document.getElementById('startButton').style.display = 'inline';
+            document.getElementById('taskContent').style.display = 'none';
+            document.getElementById('verificationCode').value = '';
+            displayMessage("Task reset. Please start the new task.");
         }
 
         // Custom message display function
