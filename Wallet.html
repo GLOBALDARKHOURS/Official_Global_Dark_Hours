@@ -111,7 +111,7 @@
         <div class="task-title">
             <h2>Daily Wallet Activity...</h2>
         </div>
-        <p>Blum: liquidity</p>
+        <p>Blum: Memecoin</p>
         <button id="startButton" onclick="startTask()">Start</button>
         <div id="taskContent" style="display:none;">
             <input type="text" id="verificationCode" placeholder="Enter Code">
@@ -129,9 +129,9 @@
 
     <script>
         const currentTaskData = {
-            name: "liquidity",
+            name: "memecoin",
             id: "task4",
-            link: "https://youtu.be/tF0LpxLX7M4?si=MAbJwIS4Nto8XhyI"
+            link: "https://youtu.be/hfPHI1fb6pw?si=jwSg-uJpbpRxzRh_"
         };
 
         // Check if task data or completion status has changed/reset
@@ -202,7 +202,7 @@
         // Verify the task by checking the input code
         function verifyTask() {
             const code = document.getElementById('verificationCode').value;
-            if (code === 'BLUMERSSS') {
+            if (code === 'memeblum') {
                 displayMessage("Wallet activity is successfully recorded!");
                 markTaskCompleted();
                 addHoursToBalance(15); // Add 15 hours to balance in index.html
