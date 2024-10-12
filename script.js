@@ -89,7 +89,7 @@ function displayMessage(message) {
 
     setTimeout(() => {
         document.body.removeChild(messageElement);
-    }, 7000); // Message will disappear after 7 seconds
+    }, 5000); // Message will disappear after 5 seconds
 }
 
 // Handle task completion
@@ -140,7 +140,7 @@ function startTask(taskId, url) {
             taskButton.disabled = true;
             taskButton.textContent = "Completed";
         }
-    }, 20000); // 20 seconds delay
+    }, 23000); // 23 seconds delay
 }
 
 // Initial setup on page load
