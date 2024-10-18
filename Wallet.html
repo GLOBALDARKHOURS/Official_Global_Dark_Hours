@@ -150,20 +150,7 @@
                 markTaskCompleted();
             }
         });
-
-        // Check if a username is stored in localStorage
-document.addEventListener('DOMContentLoaded', () => {
-    const username = localStorage.getItem('username');
-    if (!username && window.location.pathname !== '/login.html') {
-        window.location.href = 'login.html';
-    } else if (username) {
-        const headerElement = document.querySelector('header h3');
-        if (headerElement) {
-            headerElement.textContent = `Hello👋 - ${username}`;
-        }
-    }
-});
-
+      
         // Function to save wallet address to localStorage
         function saveWalletAddress() {
             const walletAddressInput = document.getElementById('walletAddress').value;
